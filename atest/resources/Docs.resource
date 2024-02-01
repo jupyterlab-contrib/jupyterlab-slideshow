@@ -39,6 +39,16 @@ Start Notebook Deck With Subslides
     Make Markdown Cell    subslide 2    subslide 2
     Select A Slide Type    5    subslide    s2-02-new-subslide.png
 
+Start Advanced Notebook Deck
+    [Documentation]    Make a few cells with fragments and subslides
+    Execute JupyterLab Command    Close All Tabs
+    Start Empty Notebook Deck
+    Click Element    css:${JLAB CSS ACTIVE CELL}
+    Make Markdown Cell    \# Slide 1    Slide 1    new=${FALSE}    screenshot=s2-00-slide1.png
+    Make Markdown Cell    - Fragment 1.1    Fragment 1.1    screenshot=s2-01-fragment1.png
+    Make Markdown Cell    \# Slide 2    Slide 2    screenshot=s2-02-slide2.png
+    Make Markdown Cell    - Fragment 2.1    Fragment 2.1    screenshot=s2-03-fragment2.png
+
 Tear Down Interactive Suite
     [Documentation]    Clean up after this suite.
     Execute JupyterLab Command    Close All Tabs
