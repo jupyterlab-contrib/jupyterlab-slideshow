@@ -1,4 +1,5 @@
-body[data-jp-deck-mode='presenting'] {
+body[data-jp-deck-mode='presenting'],
+body[data-jp-deck-mode='presenting'] .jp-ThemedContainer:has(.jp-Deck){
   background: var(--jp-layout-color0);
 }
 
