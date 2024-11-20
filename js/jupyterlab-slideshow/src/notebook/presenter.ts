@@ -62,6 +62,8 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
   protected _extents = new Map<INotebookModel, NotebookPresenter.TExtentMap>();
   protected _layers = new Map<INotebookModel, NotebookPresenter.TLayerMap>();
 
+  private _windowingModeBackup: 'defer' | 'full' | 'none' = 'full';
+
   constructor(options: NotebookPresenter.IOptions) {
     this._manager = options.manager;
     this._commands = options.commands;
@@ -95,6 +97,13 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
     }
     this._removeStyle(panel);
     panel.content.activeCellChanged.disconnect(this._onActiveCellChanged, this);
+
+    // restore the windowing mode of the notebook.
+    panel.content.notebookConfig = {
+      ...panel.content.notebookConfig,
+      windowingMode: this._windowingModeBackup
+    };
+
     panel.update();
 
     const { activeCell } = panel.content;
@@ -111,6 +120,14 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
 
   public async start(panel: NotebookPanel): Promise<void> {
     const { model, content: notebook } = panel;
+
+    // Switch to not windowing mode
+    this._windowingModeBackup = notebook.notebookConfig.windowingMode;
+    notebook.notebookConfig = {...panel.content.notebookConfig, windowingMode: 'none'};
+    // Force viewport properties that may not be properly set, depending on lab version.
+    notebook.viewportNode.style.minHeight = '';
+    (notebook.viewportNode.parentNode as HTMLDivElement).style.height = '';
+
     if (model) {
       const _watchPanel = async (change: any) => {
         /* istanbul ignore if */
