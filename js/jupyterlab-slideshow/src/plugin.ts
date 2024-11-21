@@ -1,5 +1,4 @@
 import { IFontManager } from '@deathbeds/jupyterlab-fonts';
-import { INotebookShell } from '@jupyter-notebook/application';
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin,
@@ -33,7 +32,7 @@ import '../style/index.css';
 const plugin: JupyterFrontEndPlugin<IDeckManager> = {
   id: `${NS}:plugin`,
   requires: [ITranslator, ISettingRegistry, IFontManager],
-  optional: [ILabShell, INotebookShell, ILayoutRestorer, ICommandPalette, IStatusBar],
+  optional: [ILabShell, ILayoutRestorer, ICommandPalette, IStatusBar],
   provides: IDeckManager,
   autoStart: true,
   activate: (
@@ -42,7 +41,6 @@ const plugin: JupyterFrontEndPlugin<IDeckManager> = {
     settings: ISettingRegistry,
     fonts: IFontManager,
     labShell?: ILabShell,
-    notebookShell?: INotebookShell,
     restorer?: ILayoutRestorer,
     palette?: ICommandPalette,
     statusbar?: IStatusBar,
@@ -56,7 +54,6 @@ const plugin: JupyterFrontEndPlugin<IDeckManager> = {
       commands,
       shell,
       labShell: labShell || null,
-      notebookShell: notebookShell || null,
       translator: (translator || /* istanbul ignore next */ nullTranslator).load(NS),
       statusbar: theStatusBar,
       fonts,
