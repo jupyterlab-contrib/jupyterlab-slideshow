@@ -107,6 +107,11 @@ body[data-notebook='notebooks']
   position: fixed;
 }
 
+/** cell focus not visible **/
+.jp-Deck .jp-Notebook.jp-mod-commandMode .jp-Cell.jp-mod-active:focus-visible {
+  box-shadow: none;
+}
+
 /** markdown tweaks **/
 .jp-Deck .jp-MarkdownOutput {
   border: 0;

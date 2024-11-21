@@ -44,6 +44,7 @@ export class DeckManager implements IDeckManager {
   protected _designTools: DesignTools | null = null;
   protected _settings: Promise<ISettingRegistry.ISettings>;
   protected _labShell?: LabShell | null;
+  protected _notebookShell?: INotebookShell | null;
   protected _dockPanel: DockPanel | null = null;
   protected _shell: JupyterFrontEnd.IShell;
   protected _statusbar: StatusBar | null;
@@ -513,15 +514,16 @@ export class DeckManager implements IDeckManager {
   }
 
   protected get _shellActiveWidget(): Widget | null {
-    const { _labShell, _shell, _dockPanel } = this;
+    const { _labShell, _notebookShell, _dockPanel } = this;
     if (_labShell && _dockPanel) {
       if (_labShell.activeWidget) {
         return _labShell.activeWidget;
       }
       return getSelectedWidget(_dockPanel);
-    } else {
-      return (_shell as INotebookShell).currentWidget || null;
+    } else if (_notebookShell) {
+      return _notebookShell.currentWidget || null;
     }
+    return null;
   }
 
   protected async _onSettingsChanged() {
@@ -612,6 +614,7 @@ export namespace DeckManager {
   export interface IOptions {
     commands: CommandRegistry;
     labShell: ILabShell | null;
+    notebookShell: INotebookShell | null;
     shell: JupyterFrontEnd.IShell;
     translator: TranslationBundle;
     statusbar: StatusBar | null;
