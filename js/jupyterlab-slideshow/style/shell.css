@@ -1,5 +1,6 @@
 body[data-jp-deck-mode='presenting'],
-body[data-jp-deck-mode='presenting'] .jp-ThemedContainer:has(.jp-Deck){
+body[data-jp-deck-mode='presenting'] .jp-ThemedContainer:has(.jp-Deck),
+body[data-jp-deck-mode='presenting'][data-notebook='notebooks'] .jp-WindowedPanel-outer {
   background: var(--jp-layout-color0);
 }
 
