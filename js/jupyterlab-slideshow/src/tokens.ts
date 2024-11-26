@@ -56,6 +56,7 @@ export interface IDeckManager {
   setLayerScope(layerScope: TLayerScope | null): void;
   getPartStyles(): GlobalStyles | null;
   setPartStyles(styles: GlobalStyles | null): void;
+  readonly showCodeCellPrompt: boolean;
 }
 
 export const IDeckManager = new Token<IDeckManager>(PLUGIN_ID);
@@ -128,6 +129,7 @@ export namespace CSS {
   export const stop = 'jp-deck-mod-stop';
   export const widgetStack = 'jp-Deck-Remote-WidgetStack';
   // notebook
+  export const showCodeCellPrompt = 'jp-deck-showCodeCellPrompt';
   export const direction = 'jp-deck-mod-direction';
   export const onScreen = 'jp-deck-mod-onscreen';
   export const visible = 'jp-deck-mod-visible';
@@ -266,6 +268,7 @@ export interface IStylePreset {
 
 export interface IDeckSettings {
   active?: boolean;
+  showCodeCellPrompt?: boolean;
   stylePresets?: {
     [key: string]: Partial<IStylePreset>;
   };

@@ -57,6 +57,7 @@ export class DeckManager implements IDeckManager {
   protected _layover: Layover | null = null;
   protected _activePresenter: IPresenter<Widget> | null = null;
   protected _activeWidgetStack: Widget[] = [];
+  protected _showCodeCellPrompt: boolean = false;
 
   constructor(options: DeckManager.IOptions) {
     this._appStarted = options.appStarted;
@@ -105,6 +106,10 @@ export class DeckManager implements IDeckManager {
 
   public get layoverChanged(): ISignal<IDeckManager, void> {
     return this._layoverChanged;
+  }
+
+  public get showCodeCellPrompt(): boolean {
+    return this._showCodeCellPrompt
   }
 
   /**
@@ -524,6 +529,12 @@ export class DeckManager implements IDeckManager {
     let composite: IDeckSettings;
     composite = settings.composite as IDeckSettings;
     const active = composite.active === true;
+
+    const showCodeCellPrompt = composite.showCodeCellPrompt === true;
+    if (showCodeCellPrompt !== this._showCodeCellPrompt) {
+      this._showCodeCellPrompt = showCodeCellPrompt;
+      void this._addDeckStyles();
+    }
 
     if (active && !this._active) {
       void this.start();
