@@ -1,1 +1,1 @@
-export * from '@deathbeds/jupyterlab-deck';
+export * from '@jupyterlab/slideshow';

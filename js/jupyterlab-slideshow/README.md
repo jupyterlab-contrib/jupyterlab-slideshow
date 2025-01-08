@@ -1,10 +1,10 @@
-<!-- this README can be viewed as a slideshow in jupyterlab-deck -->
+<!-- this README can be viewed as a slideshow in jupyterlab-slideshow -->
 
 ---
 
-# `jupyterlab-deck`
+# `jupyterlab-slideshow`
 
-|        docs         |                      install                      |       extend        |                        demo                         |                                    ci                                     |
+<!-- |        docs         |                      install                      |       extend        |                        demo                         |                                    ci                                     |
 | :-----------------: | :-----------------------------------------------: | :-----------------: | :-------------------------------------------------: | :-----------------------------------------------------------------------: |
 | [![rtd-badge]][rtd] | [![pypi-badge]][pypi]<br/>[![conda-badge]][conda] | [![npm-badge]][npm] | [![binder-badge]][binder]<br/>[![lite-badge]][lite] | [![ci-badge]][ci]<br/>[![reports-badge]][reports]<br/>[![cov-badge]][cov] |
 
@@ -27,11 +27,11 @@
 [conda]: https://anaconda.org/conda-forge/jupyterlab-deck
 [pypi-badge]: https://img.shields.io/pypi/v/jupyterlab-deck
 [pypi]: https://pypi.org/project/jupyterlab-deck/
-[npm]: https://npmjs.com/package/@deathbeds/jupyterlab-deck
+[npm]: https://npmjs.com/package/@jupyterlab/slideshow
 [npm-badge]: https://img.shields.io/npm/v/@deathbeds/jupyterlab-deck
 [cov]: https://codecov.io/gh/deathbeds/jupyterlab-deck
 [cov-badge]:
-  https://codecov.io/gh/deathbeds/jupyterlab-deck/branch/main/graph/badge.svg?token=LS6ZzwKlqU
+  https://codecov.io/gh/deathbeds/jupyterlab-deck/branch/main/graph/badge.svg?token=LS6ZzwKlqU -->
 
 > Lightweight presentations for JupyterLab
 
@@ -40,31 +40,31 @@
 ## Installing
 
 ```bash
-pip install jupyterlab-deck
+pip install jupyterlab-slideshow
 ```
 
-or
+<!-- or
 
 ```
-mamba install -c conda-forge jupyterlab-deck # or conda, if you must
-```
+mamba install -c conda-forge jupyterlab-slideshow # or conda, if you must
+``` -->
 
 > See [`CONTRIBUTING.md`][contributing] for a development installation.
 
-[contributing]: https://github.com/deathbeds/jupyterlab-deck
+[contributing]: https://github.com/jupyterlab-contrib/jupyterlab-slideshow
 
 ---
 
 ### Uninstalling
 
 ```bash
-pip uninstall jupyterlab-deck
+pip uninstall jupyterlab-slideshow
 ```
 
 or
 
 ```bash
-mamba remove jupyterlab-deck # or conda if you must
+mamba remove jupyterlab-slideshow # or conda if you must
 ```
 
 ---
@@ -165,7 +165,7 @@ Inspector_ sidebar][property-inspector] or the [design tools][design-tools].
 | `notes`    | _TBD: moves this cell to the off-screen note viewer_ |
 
 [deck-icon]:
-  https://raw.githubusercontent.com/deathbeds/jupyterlab-deck/main/js/jupyterlab-deck/style/img/deck.svg
+  https://raw.githubusercontent.com/jupyterlab-contrib/jupyterlab-slideshow/main/js/jupyterlab-slideshow/style/img/deck.svg
 
 ---
 
@@ -252,7 +252,7 @@ restore the part to the default layout.
 
 ```json
 {
-  "@deathbeds/jupyterlab-deck:plugin": {
+  "@jupyterlab/slideshow:plugin": {
     "active": true
   }
 }

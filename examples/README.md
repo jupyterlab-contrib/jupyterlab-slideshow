@@ -2,7 +2,7 @@
 
 ---
 
-# `jupyterlab-deck` examples
+# `jupyterlab-slideshow` examples
 
 The contents of this folder are copied into the JupyterLite site.
 

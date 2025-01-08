@@ -6,5 +6,5 @@
   },
   "extends": "../../tsconfigbase",
   "include": ["./**/*"],
-  "references": [{ "path": "../../jupyterlab-deck/src" }]
+  "references": [{ "path": "../../jupyterlab-slideshow/src" }]
 }

@@ -38,7 +38,7 @@ https://jupyterlab.readthedocs.io/en/latest/getting_started/issue.html
 - Operating System and version:
 - Browser and version:
 - JupyterLab version:
-- jupyterlab-deck version(s):
+- jupyterlab-slideshow version(s):
 
 <details><summary>Required: installed server extensions</summary>
 <pre>

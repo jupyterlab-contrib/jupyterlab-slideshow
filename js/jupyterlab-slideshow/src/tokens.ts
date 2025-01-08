@@ -252,7 +252,7 @@ export const LAYER_TITLES: TSelectLabels<TLayerScope | '-'> = {
   fragment: 'Show this until the next fragment.',
 };
 
-/** Expected cell metadata in the `jupyterlab-deck` namespace */
+/** Expected cell metadata in the `jupyterlab-slideshow` namespace */
 export interface ICellDeckMetadata {
   layer?: TLayerScope;
 }

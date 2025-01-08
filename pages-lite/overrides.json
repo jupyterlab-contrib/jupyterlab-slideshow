@@ -2,7 +2,7 @@
   "jupyterlab-videochat:plugin": {
     "disablePublicRooms": false
   },
-  "@deathbeds/jupyterlab-deck:plugin": {
+  "@jupyterlab/slideshow:plugin": {
     "active": true
   }
 }

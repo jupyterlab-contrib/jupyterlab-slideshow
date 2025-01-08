@@ -593,7 +593,7 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
     return extents.get(e.onScreen[0]) || null;
   }
 
-  /** Get layer metadata from `jupyterlab-deck` namespace */
+  /** Get layer metadata from `jupyterlab-slideshow` namespace */
   protected _getCellDeckMetadata(cell: ICellModel): ICellDeckMetadata {
     return (getCellMetadata(cell, META.deck) ||
       emptyObject) as any as ICellDeckMetadata;

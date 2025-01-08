@@ -1,4 +1,4 @@
-"""documentation for jupyterlab-deck."""
+"""documentation for jupyterlab-slideshow."""
 import datetime
 from pathlib import Path
 
@@ -77,18 +77,18 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "PyPI",
-            "url": "https://pypi.org/project/jupyterlab-deck",
+            "url": "https://pypi.org/project/jupyterlab-slideshow",
             "icon": "fa-brands fa-python",
         },
-        {
-            "name": "conda-forge",
-            "url": "https://github.com/conda-forge/jupyterlab-deck-feedstock#about-jupyterlab-deck",
-            "icon": "_static/anvil.svg",
-            "type": "local",
-        },
+        # {
+        #     "name": "conda-forge",
+        #     "url": "https://github.com/conda-forge/jupyterlab-deck-feedstock#about-jupyterlab-deck",
+        #     "icon": "_static/anvil.svg",
+        #     "type": "local",
+        # },
         {
             "name": "npm",
-            "url": "https://www.npmjs.com/package/@deathbeds/jupyterlab-deck",
+            "url": "https://www.npmjs.com/package/@jupyterlab/slideshow",
             "icon": "fa-brands fa-npm",
         },
     ],
@@ -97,8 +97,8 @@ html_theme_options = {
 }
 
 html_context = {
-    "github_user": "deathbeds",
-    "github_repo": "jupyterlab-deck",
+    "github_user": "jupyterlab-contrib",
+    "github_repo": "jupyterlab-slideshow",
     "github_version": "main",
     "doc_path": "docs",
 }

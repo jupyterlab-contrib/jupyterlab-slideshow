@@ -42,5 +42,5 @@ doit serve:lab:legacy
 
 ### Releasing
 
-- Start a [release issue](https://github.com/jupyterlab-deck/issues)
+- Start a [release issue](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/issues)
 - Follow the checklist

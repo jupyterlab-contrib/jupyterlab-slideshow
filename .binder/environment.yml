@@ -1,4 +1,4 @@
-name: jupyterlab-deck-demo
+name: jupyterlab-slideshow-demo
 
 channels:
   - conda-forge

@@ -1,17 +1,20 @@
 {
   "private": true,
-  "name": "@deathbeds/jupyterlab-deck-metapackage",
+  "name": "@jupyterlab/slideshow-metapackage",
   "version": "0.0.0",
   "description": "JupyterLab Deck - Metapackage",
   "license": "BSD-3-Clause",
-  "author": "jupyterlab-deck contributors",
-  "homepage": "https://github.com/deathbeds/jupyterlab-deck",
+  "author": {
+    "name": "Jupyter Development Team",
+    "email": "jupyter@googlegroups.com"
+  },
+  "homepage": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deathbeds/jupyterlab-deck.git"
+    "url": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow.git"
   },
   "bugs": {
-    "url": "https://github.com/deathbeds/jupyterlab-deck/issues"
+    "url": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow/issues"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -20,6 +23,6 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@deathbeds/jupyterlab-deck": "workspace:^"
+    "@jupyterlab/slideshow": "workspace:^"
   }
 }

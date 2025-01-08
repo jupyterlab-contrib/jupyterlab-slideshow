@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
-_PKG_PATH = "share/jupyter/labextensions/@deathbeds/jupyterlab-deck/package.json"
+_PKG_PATH = "share/jupyter/labextensions/@jupyterlab/slideshow/package.json"
 
 _D = HERE.parent / "_d"
 

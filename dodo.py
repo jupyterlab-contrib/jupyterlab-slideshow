@@ -1,4 +1,4 @@
-"""automation for jupyterlab-deck."""
+"""automation for jupyterlab-slideshow."""
 import json
 import os
 import platform
@@ -23,7 +23,7 @@ if DOT_ENV.exists():
 
 
 class C:
-    NPM_NAME = "@deathbeds/jupyterlab-deck"
+    NPM_NAME = "@jupyterlab/slideshow"
     OLD_VERSION = "0.2.0"
     VERSION = "0.2.1"
     JS_VERSION = (
@@ -82,12 +82,12 @@ class P:
     JS_PACKAGE_JSONS = [*JS.glob(f"*/{C.PACKAGE_JSON}")]
     ALL_PACKAGE_JSONS = [*JS_PACKAGE_JSONS, ROOT / C.PACKAGE_JSON]
     JS_TS_INFO = [*JS.glob("*/tsconfig.json"), *JS.glob("*/src/tsconfig.json")]
-    EXT_JS_PKG = JS / "jupyterlab-deck"
+    EXT_JS_PKG = JS / "jupyterlab-slideshow"
     EXT_JS_WEBPACK = EXT_JS_PKG / "webpack.config.js"
     EXT_JS_LICENSE = EXT_JS_PKG / "LICENSE"
     EXT_JS_README = EXT_JS_PKG / "README.md"
     SRC = ROOT / "src"
-    PY_SRC = ROOT / "jupyterlab_deck"
+    PY_SRC = ROOT / "jupyterlab_slideshow"
     PYPROJECT_TOML = ROOT / C.PYPROJECT_TOML
     DOCS_STATIC = DOCS / "_static"
     DOCS_PY = [*DOCS.glob("*.py")]
@@ -146,11 +146,11 @@ class B:
     LITE = BUILD / "lite"
     STATIC = P.SRC / f"_d/share/jupyter/labextensions/{C.NPM_NAME}"
     STATIC_PKG_JSON = STATIC / C.PACKAGE_JSON
-    WHEEL = DIST / f"jupyterlab_deck-{C.VERSION}-py3-none-any.whl"
-    SDIST = DIST / f"jupyterlab_deck-{C.VERSION}.tar.gz"
+    WHEEL = DIST / f"jupyterlab_slideshow-{C.VERSION}-py3-none-any.whl"
+    SDIST = DIST / f"jupyterlab_slideshow-{C.VERSION}.tar.gz"
     LITE_SHASUMS = LITE / "SHA256SUMS"
     STYLELINT_CACHE = BUILD / ".stylelintcache"
-    NPM_TARBALL = DIST / f"deathbeds-jupyterlab-deck-{C.JS_VERSION}.tgz"
+    NPM_TARBALL = DIST / f"jupyterlab-slideshow-{C.JS_VERSION}.tgz"
     DIST_HASH_DEPS = [NPM_TARBALL, WHEEL, SDIST]
     DIST_SHASUMS = DIST / "SHA256SUMS"
     ENV_PKG_JSON = ENV / f"share/jupyter/labextensions/{C.NPM_NAME}/{C.PACKAGE_JSON}"

@@ -1,4 +1,4 @@
-name: jupyterlab-deck-test-35
+name: jupyterlab-slideshow-test-35
 
 channels:
   - conda-forge

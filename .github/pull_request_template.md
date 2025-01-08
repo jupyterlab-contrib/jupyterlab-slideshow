@@ -1,9 +1,9 @@
 <!--
-Thanks for contributing to jupyterlab-deck!
+Thanks for contributing to jupyterlab-slideshow!
 Please fill out the following items to submit a pull request.
 
 See the contributing guidelines for more information:
-https://github.com/deathbeds/jupyterlab-deck/main/CONTRIBUTING.md
+https://github.com/@jupyterlab-contrib/jupyterlab-slideshow/main/CONTRIBUTING.md
 -->
 
 ## Checklist
@@ -28,4 +28,4 @@ https://github.com/deathbeds/jupyterlab-deck/main/CONTRIBUTING.md
 
 ## Backwards-incompatible changes
 
-<!-- Describe any backwards-incompatible changes to jupyterlab-deck public APIs. -->
+<!-- Describe any backwards-incompatible changes to jupyterlab-slideshow public APIs. -->

@@ -1,9 +1,12 @@
 {
   "private": true,
-  "name": "@deathbeds/jupyterlab-deck-repo",
+  "name": "@jupyterlab/slideshow-repo",
   "version": "0.0.0",
-  "author": "jupyterlab-deck contributors",
-  "homepage": "https://github.com/deathbeds/jupyterlab-deck",
+  "author": {
+    "name": "Jupyter Development Team",
+    "email": "jupyter@googlegroups.com"
+  },
+  "homepage": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow",
   "workspaces": {
     "packages": [
       "js/*"

@@ -1,4 +1,4 @@
-name: jupyterlab-deck-lint
+name: jupyterlab-slideshow-lint
 
 channels:
   - conda-forge

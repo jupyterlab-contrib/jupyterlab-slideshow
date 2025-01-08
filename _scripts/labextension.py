@@ -13,7 +13,7 @@ BUILDER = NODE_MODULES / "@jupyterlab/builder/lib/build-labextension.js"
 
 
 def _get_labextension_metadata(module):
-    module = "jupyterlab_deck"
+    module = "jupyterlab_slideshow"
     m = importlib.import_module(module)
     return m, m._jupyter_labextension_paths()
 
