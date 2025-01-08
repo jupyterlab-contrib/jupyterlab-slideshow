@@ -1,5 +1,13 @@
 ## Changelog
 
+### `0.3.0`
+
+- [#9](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/9) Fix CI installation
+- [#10](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/10) Fix navigation if previous is subslide
+- [#11](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/11) Keep track of the last fragment or sub-slide displayed when moving back or forward
+- [#12](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/12) Optionally shows the code cell prompt (execution count)
+- [#13](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/13) Jupyterlab>4.1
+
 ### `0.2.1`
 
 - > TBD
