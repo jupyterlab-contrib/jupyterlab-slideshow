@@ -79,6 +79,11 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
 
   public async style(panel: NotebookPanel): Promise<void> {
     panel.addClass(CSS.deck);
+    if (this._manager.showCodeCellPrompt) {
+      panel.addClass(CSS.showCodeCellPrompt);
+    } else {
+      panel.removeClass(CSS.showCodeCellPrompt);
+    }
     this._manager.cacheStyle(panel.node, panel.content.node);
   }
 

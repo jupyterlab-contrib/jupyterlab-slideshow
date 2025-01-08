@@ -1,9 +1,21 @@
 /** heavy ui tweaks **/
-.jp-Deck .jp-InputPrompt,
-.jp-Deck .jp-OutputPrompt,
+.jp-Deck:not(.jp-deck-showCodeCellPrompt) .jp-InputPrompt,
+.jp-Deck:not(.jp-deck-showCodeCellPrompt) .jp-OutputPrompt,
 .jp-Deck .jp-Notebook-footer,
 .jp-Deck .jp-cell-toolbar {
   display: none;
+}
+
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-InputPrompt,
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-OutputPrompt {
+  /* uses visibility instead of display to keep alignment between markdown and code cell */
+  visibility: hidden;
+}
+
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-CodeCell .jp-InputPrompt,
+.jp-Deck.jp-deck-showCodeCellPrompt .jp-CodeCell .jp-OutputPrompt {
+  display: inherit;
+  visibility: inherit;
 }
 
 .jp-Deck .jp-NotebookPanel-toolbar {

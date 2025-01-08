@@ -37,6 +37,12 @@
       "default": false,
       "description": "Whether presentation mode is currently active."
     },
+    "showCodeCellPrompt": {
+      "title": "Show execution count",
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to show the execution count (input prompt) in Notebook presentation"
+    },
     "stylePresets": {
       "title": "Style Presets",
       "$ref": "#/definitions/style-presets",
