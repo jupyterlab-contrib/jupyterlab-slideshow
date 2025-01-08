@@ -24,18 +24,18 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@jupyterlab/application": "3 || 4",
-    "@jupyterlab/apputils": "3 || 4",
-    "@jupyterlab/fileeditor": "3 || 4",
-    "@jupyterlab/markdownviewer": "3 || 4",
-    "@jupyterlab/notebook": "3 || 4",
-    "@jupyterlab/statusbar": "3 || 4",
-    "@jupyterlab/ui-components": "3 || 4",
+    "@jupyterlab/application": "^4.1.0",
+    "@jupyterlab/apputils": "^4.2.0",
+    "@jupyterlab/fileeditor": "^4.1.0",
+    "@jupyterlab/markdownviewer": "^4.1.0",
+    "@jupyterlab/notebook": "^4.1.0",
+    "@jupyterlab/statusbar": "^4.1.0",
+    "@jupyterlab/ui-components": "^4.1.0",
     "d3-drag": "3"
   },
   "devDependencies": {
     "@deathbeds/jupyterlab-fonts": "^3.0.0",
-    "@jupyter-notebook/application": "^7.0.5",
+    "@jupyter-notebook/application": "^7.1.0",
     "@jupyterlab/builder": "^4.0.7",
     "@types/d3-drag": "3"
   },
