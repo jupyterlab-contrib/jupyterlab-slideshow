@@ -143,7 +143,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           environment-file: .binder/environment.yml
-          miniforge-variant: Mambaforge
+          miniforge-variant: Miniforge
           use-mamba: true
 
       - name: lint
