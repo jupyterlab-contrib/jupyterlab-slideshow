@@ -39,6 +39,9 @@
     "@jupyterlab/builder": "^4.0.7",
     "@types/d3-drag": "3"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "jupyterlab": {
     "extension": "lib/plugin.js",
     "outputDir": "../../src/_d/share/jupyter/labextensions/@jupyterlab/slideshow",
