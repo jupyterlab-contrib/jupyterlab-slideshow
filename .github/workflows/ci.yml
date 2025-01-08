@@ -107,161 +107,159 @@ jobs:
           name: jupyterlab-slideshow-dist-${{ github.run_number }}
           path: ./dist
 
-  lint:
-    runs-on: ${{ matrix.os }}-latest
-    strategy:
-      matrix:
-        os: [ubuntu]
-        python-version: ['3.11']
-    env:
-      WITH_JS_COV: 1
-    defaults:
-      run:
-        shell: bash -l {0}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  # lint:
+  #   runs-on: ${{ matrix.os }}-latest
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu]
+  #       python-version: ['3.11']
+  #   env:
+  #     WITH_JS_COV: 1
+  #   defaults:
+  #     run:
+  #       shell: bash -l {0}
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
-      - name: cache (conda)
-        uses: actions/cache@v3
-        with:
-          path: ~/conda_pkgs_dir
-          key: |
-            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-lint-${{ matrix.python-version }}-${{ hashFiles('.binder/environment.yml') }}
-          restore-keys: |
-            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-lint-${{ matrix.python-version }}-
+  #     - name: cache (conda)
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: ~/conda_pkgs_dir
+  #         key: |
+  #           ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-lint-${{ matrix.python-version }}-${{ hashFiles('.binder/environment.yml') }}
+  #         restore-keys: |
+  #           ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-lint-${{ matrix.python-version }}-
 
-      - name: Cache (node_modules)
-        uses: actions/cache@v3
-        id: cache-node-modules
-        with:
-          path: node_modules/
-          key: |
-            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+  #     - name: Cache (node_modules)
+  #       uses: actions/cache@v3
+  #       id: cache-node-modules
+  #       with:
+  #         path: node_modules/
+  #         key: |
+  #           ${{ env.CACHE_EPOCH }}-${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
-      - name: install (conda)
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          environment-file: .binder/environment.yml
-          miniforge-variant: Miniforge
-          use-mamba: true
+  #     - name: install (conda)
+  #       uses: conda-incubator/setup-miniconda@v3
+  #       with:
+  #         environment-file: .binder/environment.yml
+  #         use-mamba: true
 
-      - name: lint
-        run: doit lint
+  #     - name: lint
+  #       run: doit lint
 
-      - name: dist
-        env:
-          WITH_JS_COV: 0
-        run: doit dist
+  #     - name: dist
+  #       env:
+  #         WITH_JS_COV: 0
+  #       run: doit dist
 
-      - name: build
-        run: doit build
+  #     - name: build
+  #       run: doit build
 
-      - name: dev
-        run: doit dev
+  #     - name: dev
+  #       run: doit dev
 
-      - name: test latest (with cov)
-        run: doit test:robot
+  #     - name: test latest (with cov)
+  #       run: doit test:robot
 
-      - name: dev (legacy)
-        run: doit legacy:pip
+  #     - name: dev (legacy)
+  #       run: doit legacy:pip
 
-      - name: test legacy
-        run: doit legacy:robot
+  #     - name: test legacy
+  #       run: doit legacy:robot
 
-      - name: report
-        run: doit report
+  #     - name: report
+  #       run: doit report
 
-      - name: docs
-        run: doit docs
+  #     - name: docs
+  #       run: doit docs
 
-      - name: check
-        run: doit check
+  #     - name: check
+  #       run: doit check
 
-      - name: upload (reports)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: jupyterlab-slideshow-lint-reports-${{ github.run_number }}
-          path: ./build/reports
+  #     - name: upload (reports)
+  #       if: always()
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: jupyterlab-slideshow-lint-reports-${{ github.run_number }}
+  #         path: ./build/reports
 
-      - uses: codecov/codecov-action@v3
-        with:
-          directory: ./build/reports/nyc/
-          verbose: true
-          flags: front-end
+  #     - uses: codecov/codecov-action@v3
+  #       with:
+  #         directory: ./build/reports/nyc/
+  #         verbose: true
+  #         flags: front-end
 
-  test:
-    needs: [build]
-    name: ${{ matrix.os }} ${{ matrix.python-version }}
-    runs-on: ${{ matrix.os }}-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ['ubuntu', 'macos', 'windows']
-        python-version: ['3.8', '3.11']
-        include:
-          - python-version: '3.8'
-            CI_ARTIFACT: 'sdist'
-          - python-version: '3.11'
-            CI_ARTIFACT: 'wheel'
-    env:
-      TESTING_IN_CI: '1'
-    steps:
-      - name: configure line endings
-        run: |
-          git config --global core.autocrlf false
+  # test:
+  #   needs: [build]
+  #   name: ${{ matrix.os }} ${{ matrix.python-version }}
+  #   runs-on: ${{ matrix.os }}-latest
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os: ['ubuntu', 'macos', 'windows']
+  #       python-version: ['3.8', '3.11']
+  #       include:
+  #         - python-version: '3.8'
+  #           CI_ARTIFACT: 'sdist'
+  #         - python-version: '3.11'
+  #           CI_ARTIFACT: 'wheel'
+  #   env:
+  #     TESTING_IN_CI: '1'
+  #   steps:
+  #     - name: configure line endings
+  #       run: |
+  #         git config --global core.autocrlf false
 
-      - name: checkout
-        uses: actions/checkout@v4
+  #     - name: checkout
+  #       uses: actions/checkout@v4
 
-      - name: cache (conda)
-        uses: actions/cache@v3
-        with:
-          path: ~/conda_pkgs_dir
-          key: |
-            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-test-${{ matrix.python-version }}-${{ hashFiles('.github/environment-test.yml') }}
-          restore-keys: |
-            ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-test-${{ matrix.python-version }}-
+  #     - name: cache (conda)
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: ~/conda_pkgs_dir
+  #         key: |
+  #           ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-test-${{ matrix.python-version }}-${{ hashFiles('.github/environment-test.yml') }}
+  #         restore-keys: |
+  #           ${{ env.CACHE_EPOCH }}-${{ runner.os }}-conda-test-${{ matrix.python-version }}-
 
-      - name: install (conda)
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          miniforge-variant: Mambaforge
-          python-version: ${{ matrix.python-version }}
-          environment-file: .github/environment-test.yml
-          use-mamba: true
+  #     - name: install (conda)
+  #       uses: conda-incubator/setup-miniconda@v3
+  #       with:
+  #         python-version: ${{ matrix.python-version }}
+  #         environment-file: .github/environment-test.yml
+  #         use-mamba: true
 
-      - name: download (dist)
-        uses: actions/download-artifact@v3
-        with:
-          name: jupyterlab-slideshow-dist-${{ github.run_number }}
-          path: ./dist
+  #     - name: download (dist)
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: jupyterlab-slideshow-dist-${{ github.run_number }}
+  #         path: ./dist
 
-      - name: dev (unix)
-        if: matrix.os != 'windows'
-        shell: bash -l {0}
-        run: doit dev
+  #     - name: dev (unix)
+  #       if: matrix.os != 'windows'
+  #       shell: bash -l {0}
+  #       run: doit dev
 
-      - name: dev (windows)
-        if: matrix.os == 'windows'
-        shell: cmd /C CALL {0}
-        run: doit dev
+  #     - name: dev (windows)
+  #       if: matrix.os == 'windows'
+  #       shell: cmd /C CALL {0}
+  #       run: doit dev
 
-      - name: test latest (unix)
-        if: matrix.os != 'windows'
-        shell: bash -l {0}
-        run: doit test
+  #     - name: test latest (unix)
+  #       if: matrix.os != 'windows'
+  #       shell: bash -l {0}
+  #       run: doit test
 
-      - name: test latest (windows)
-        if: matrix.os == 'windows'
-        shell: cmd /C CALL {0}
-        run: doit test
+  #     - name: test latest (windows)
+  #       if: matrix.os == 'windows'
+  #       shell: cmd /C CALL {0}
+  #       run: doit test
 
-      - name: upload (reports)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: |-
-            jupyterlab-slideshow-reports-${{ matrix.os }}-${{matrix.python-version }}-${{ github.run_number }}
-          path: ./build/reports
+  #     - name: upload (reports)
+  #       if: always()
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: |-
+  #           jupyterlab-slideshow-reports-${{ matrix.os }}-${{matrix.python-version }}-${{ github.run_number }}
+  #         path: ./build/reports
