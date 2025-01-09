@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "@jupyterlab/slideshow-metapackage",
+  "name": "jupyterlab-slideshow-metapackage",
   "version": "0.0.0",
   "description": "JupyterLab Deck - Metapackage",
   "license": "BSD-3-Clause",
   "author": {
-    "name": "Jupyter Development Team",
-    "email": "jupyter@googlegroups.com"
+    "name": "JupyterLab Contrib Team",
+    "email": ""
   },
   "homepage": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow",
   "repository": {
@@ -23,6 +23,6 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@jupyterlab/slideshow": "workspace:^"
+    "jupyterlab-slideshow": "workspace:^"
   }
 }

@@ -1505,63 +1505,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyterlab/slideshow-metapackage@workspace:js/_meta":
-  version: 0.0.0-use.local
-  resolution: "@jupyterlab/slideshow-metapackage@workspace:js/_meta"
-  dependencies:
-    "@jupyterlab/slideshow": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@jupyterlab/slideshow-repo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@jupyterlab/slideshow-repo@workspace:."
-  dependencies:
-    "@ephesoft/webpack.istanbul.loader": ^2.2.0
-    "@istanbuljs/nyc-config-typescript": ^1.0.2
-    "@typescript-eslint/eslint-plugin": ^6.7.3
-    "@typescript-eslint/parser": ^6.7.3
-    eslint: ^8.50.0
-    eslint-config-prettier: ^9.0.0
-    eslint-plugin-import: ^2.28.1
-    eslint-plugin-prettier: ^5.0.0
-    eslint-plugin-react: ^7.33.2
-    lerna: ^7.3.0
-    nyc: ^15.1.0
-    prettier: ^3.0.3
-    prettier-package-json: ^2.8.0
-    prettier-plugin-sort-json: ^3.1.0
-    source-map-loader: ^4.0.1
-    stylelint: ^15.10.3
-    stylelint-config-recommended: ^13.0.0
-    stylelint-config-standard: ^34.0.0
-    stylelint-prettier: ^4.0.2
-    ts-loader: ^9.4.4
-    ts-node: ^10.9.1
-    typescript: ~5.2.2
-    yarn-berry-deduplicate: ^6.1.1
-  languageName: unknown
-  linkType: soft
-
-"@jupyterlab/slideshow@workspace:^, @jupyterlab/slideshow@workspace:js/jupyterlab-slideshow":
-  version: 0.0.0-use.local
-  resolution: "@jupyterlab/slideshow@workspace:js/jupyterlab-slideshow"
-  dependencies:
-    "@deathbeds/jupyterlab-fonts": ^3.0.0
-    "@jupyter-notebook/application": ^7.1.0
-    "@jupyterlab/application": ^4.1.0
-    "@jupyterlab/apputils": ^4.2.0
-    "@jupyterlab/builder": ^4.0.7
-    "@jupyterlab/fileeditor": ^4.1.0
-    "@jupyterlab/markdownviewer": ^4.1.0
-    "@jupyterlab/notebook": ^4.1.0
-    "@jupyterlab/statusbar": ^4.1.0
-    "@jupyterlab/ui-components": ^4.1.0
-    "@types/d3-drag": 3
-    d3-drag: 3
-  languageName: unknown
-  linkType: soft
-
 "@jupyterlab/statedb@npm:^4.2.6, @jupyterlab/statedb@npm:^4.3.1":
   version: 4.3.1
   resolution: "@jupyterlab/statedb@npm:4.3.1"
@@ -7683,6 +7626,63 @@ __metadata:
   checksum: f4b05fa4d7b5234230c905cfa88d36dc8a58a6666975a3891429b1a8cdc8a140bca76c297225cb7a499fad25a2c052ac93934449a2c31a44fc9edd06c773780a
   languageName: node
   linkType: hard
+
+"jupyterlab-slideshow-metapackage@workspace:js/_meta":
+  version: 0.0.0-use.local
+  resolution: "jupyterlab-slideshow-metapackage@workspace:js/_meta"
+  dependencies:
+    jupyterlab-slideshow: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"jupyterlab-slideshow-repo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "jupyterlab-slideshow-repo@workspace:."
+  dependencies:
+    "@ephesoft/webpack.istanbul.loader": ^2.2.0
+    "@istanbuljs/nyc-config-typescript": ^1.0.2
+    "@typescript-eslint/eslint-plugin": ^6.7.3
+    "@typescript-eslint/parser": ^6.7.3
+    eslint: ^8.50.0
+    eslint-config-prettier: ^9.0.0
+    eslint-plugin-import: ^2.28.1
+    eslint-plugin-prettier: ^5.0.0
+    eslint-plugin-react: ^7.33.2
+    lerna: ^7.3.0
+    nyc: ^15.1.0
+    prettier: ^3.0.3
+    prettier-package-json: ^2.8.0
+    prettier-plugin-sort-json: ^3.1.0
+    source-map-loader: ^4.0.1
+    stylelint: ^15.10.3
+    stylelint-config-recommended: ^13.0.0
+    stylelint-config-standard: ^34.0.0
+    stylelint-prettier: ^4.0.2
+    ts-loader: ^9.4.4
+    ts-node: ^10.9.1
+    typescript: ~5.2.2
+    yarn-berry-deduplicate: ^6.1.1
+  languageName: unknown
+  linkType: soft
+
+"jupyterlab-slideshow@workspace:^, jupyterlab-slideshow@workspace:js/jupyterlab-slideshow":
+  version: 0.0.0-use.local
+  resolution: "jupyterlab-slideshow@workspace:js/jupyterlab-slideshow"
+  dependencies:
+    "@deathbeds/jupyterlab-fonts": ^3.0.0
+    "@jupyter-notebook/application": ^7.1.0
+    "@jupyterlab/application": ^4.1.0
+    "@jupyterlab/apputils": ^4.2.0
+    "@jupyterlab/builder": ^4.0.7
+    "@jupyterlab/fileeditor": ^4.1.0
+    "@jupyterlab/markdownviewer": ^4.1.0
+    "@jupyterlab/notebook": ^4.1.0
+    "@jupyterlab/statusbar": ^4.1.0
+    "@jupyterlab/ui-components": ^4.1.0
+    "@types/d3-drag": 3
+    d3-drag: 3
+  languageName: unknown
+  linkType: soft
 
 "keyv@npm:^4.0.0, keyv@npm:^4.5.3":
   version: 4.5.4
