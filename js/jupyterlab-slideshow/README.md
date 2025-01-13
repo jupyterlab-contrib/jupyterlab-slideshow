@@ -2,7 +2,7 @@
 
 ---
 
-# `jupyterlab-slideshow`
+# jupyterlab-slideshow
 
 <!-- |        docs         |                      install                      |       extend        |                        demo                         |                                    ci                                     |
 | :-----------------: | :-----------------------------------------------: | :-----------------: | :-------------------------------------------------: | :-----------------------------------------------------------------------: |
@@ -34,6 +34,8 @@
   https://codecov.io/gh/deathbeds/jupyterlab-deck/branch/main/graph/badge.svg?token=LS6ZzwKlqU -->
 
 > Lightweight presentations for JupyterLab
+
+Fork of <https://github.com/deathbeds/jupyterlab-deck>
 
 ---
 

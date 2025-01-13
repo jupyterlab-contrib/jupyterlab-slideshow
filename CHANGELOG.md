@@ -1,5 +1,9 @@
 ## Changelog
 
+### `0.3.1`
+
+- [#16](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/16) Rename npm package
+
 ### `0.3.0`
 
 - [#9](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/9) Fix CI installation
