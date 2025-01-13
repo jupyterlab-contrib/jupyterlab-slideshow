@@ -198,5 +198,6 @@
       "color-function-notation": null,
       "selector-class-pattern": null
     }
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }
