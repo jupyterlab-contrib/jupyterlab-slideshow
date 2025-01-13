@@ -23,7 +23,7 @@ if DOT_ENV.exists():
 
 
 class C:
-    NPM_NAME = "@jupyterlab/slideshow"
+    NPM_NAME = "jupyterlab-slideshow"
     OLD_VERSION = "0.2.1"
     VERSION = "0.3.0"
     JS_VERSION = (

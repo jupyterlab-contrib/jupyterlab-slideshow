@@ -1,1 +1,1 @@
-export * from '@jupyterlab/slideshow';
+export * from 'jupyterlab-slideshow';

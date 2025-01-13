@@ -27,7 +27,7 @@
 [conda]: https://anaconda.org/conda-forge/jupyterlab-deck
 [pypi-badge]: https://img.shields.io/pypi/v/jupyterlab-deck
 [pypi]: https://pypi.org/project/jupyterlab-deck/
-[npm]: https://npmjs.com/package/@jupyterlab/slideshow
+[npm]: https://npmjs.com/package/jupyterlab-slideshow
 [npm-badge]: https://img.shields.io/npm/v/@deathbeds/jupyterlab-deck
 [cov]: https://codecov.io/gh/deathbeds/jupyterlab-deck
 [cov-badge]:
@@ -252,7 +252,7 @@ restore the part to the default layout.
 
 ```json
 {
-  "@jupyterlab/slideshow:plugin": {
+  "jupyterlab-slideshow:plugin": {
     "active": true
   }
 }

@@ -2,7 +2,7 @@
   "jupyterlab-videochat:plugin": {
     "disablePublicRooms": false
   },
-  "@jupyterlab/slideshow:plugin": {
+  "jupyterlab-slideshow:plugin": {
     "active": true
   }
 }

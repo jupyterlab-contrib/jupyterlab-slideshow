@@ -88,7 +88,7 @@ html_theme_options = {
         # },
         {
             "name": "npm",
-            "url": "https://www.npmjs.com/package/@jupyterlab/slideshow",
+            "url": "https://www.npmjs.com/package/jupyterlab-slideshow",
             "icon": "fa-brands fa-npm",
         },
     ],

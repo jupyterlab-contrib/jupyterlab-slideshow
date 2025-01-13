@@ -1,11 +1,11 @@
 {
-  "name": "@jupyterlab/slideshow",
+  "name": "jupyterlab-slideshow",
   "version": "0.3.0",
   "description": "Lightweight presentations for JupyterLab",
   "license": "BSD-3-Clause",
   "author": {
-    "name": "Jupyter Development Team",
-    "email": "jupyter@googlegroups.com"
+    "name": "JupyterLab Contrib Team",
+    "email": ""
   },
   "homepage": "https://github.com/jupyterlab-contrib/jupyterlab-slideshow",
   "repository": {
@@ -44,7 +44,7 @@
   },
   "jupyterlab": {
     "extension": "lib/plugin.js",
-    "outputDir": "../../src/_d/share/jupyter/labextensions/@jupyterlab/slideshow",
+    "outputDir": "../../src/_d/share/jupyter/labextensions/jupyterlab-slideshow",
     "schemaDir": "schema",
     "webpackConfig": "./webpack.config.js",
     "sharedPackages": {
