@@ -1,7 +1,7 @@
 body[data-jp-deck-mode='presenting'],
-body[data-jp-deck-mode='presenting'] .jp-ThemedContainer:has(.jp-Deck),
-body[data-jp-deck-mode='presenting'][data-notebook='notebooks'] .jp-WindowedPanel-outer {
-  background: var(--jp-layout-color0);
+body[data-jp-deck-mode='presenting'] .jp-ThemedContainer:has(.jp-Deck) {
+  /* 'important' is required for Notebook application which add again this rule */
+  background: var(--jp-layout-color0) !important;
 }
 
 body[data-jp-deck-mode='presenting'] #jp-main-content-panel {
