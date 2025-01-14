@@ -76,7 +76,10 @@ body[data-notebook='notebooks']
   background: transparent !important;
 }
 
-.jp-Deck .jp-Notebook.jp-mod-scrollPastEnd::after {
+/* Both are required for compatibility with Jupyterlab before and after 4.1.0, after
+https://github.com/jupyterlab/jupyterlab/commit/6a86d8f163fe11cf7b1964b1ed54999ee2234c8c#diff-ccf3f53605be6603fd5fd949742f25ea8919c48dcc75322c483ebf9988404 */
+.jp-Deck .jp-Notebook.jp-mod-scrollPastEnd::after,
+.jp-Deck .jp-Notebook.jp-mod-scrollPastEnd > .jp-WindowedPanel-outer::after {
   display: none;
 }
 
