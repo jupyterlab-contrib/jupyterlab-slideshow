@@ -411,7 +411,7 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
       panel.content.activeCellIndex = moveTo;
     } else if (fromExtentAlternate != null) {
       let moveTo = fromExtentAlternate;
-      if (['back', 'forward'].includes(direction)) {
+      if (alternate && ['back', 'forward'].includes(alternate)) {
         moveTo = this._slideBackup(extents, activeCellIndex, fromExtentAlternate);
       }
       panel.content.activeCellIndex = moveTo;
