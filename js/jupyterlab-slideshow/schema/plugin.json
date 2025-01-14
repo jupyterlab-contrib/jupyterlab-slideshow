@@ -30,6 +30,15 @@
   "description": "Configure Deck Settings",
   "jupyter.lab.setting-icon": "deck:start",
   "jupyter.lab.setting-icon-label": "Decks",
+  "jupyter.lab.toolbars": {
+    "Notebook": [
+      {
+        "name": "deck",
+        "command": "deck:toggle",
+        "rank": 900
+      }
+    ]
+  },
   "properties": {
     "active": {
       "title": "Activate Deck",
