@@ -100,7 +100,7 @@ const notebookPlugin: JupyterFrontEndPlugin<void> = {
 
     app.docRegistry.addWidgetExtension(
       NOTEBOOK_FACTORY,
-      new NotebookDeckExtension({ commands, presenter }),
+      new NotebookDeckExtension({ presenter }),
     );
   },
 };
