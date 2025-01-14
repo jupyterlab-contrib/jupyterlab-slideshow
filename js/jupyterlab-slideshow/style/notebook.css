@@ -57,11 +57,16 @@
   background: transparent;
 }
 
-.jp-Deck .jp-Notebook.jp-WindowedPanel-outer,
+.jp-Deck .jp-Notebook .jp-WindowedPanel-outer,
 .jp-Deck .jp-Notebook .jp-WindowedPanel-inner,
 body[data-notebook='notebooks'] .jp-Deck .jp-WindowedPanel-window,
 body[data-notebook='notebooks'] .jp-Deck .jp-Notebook-cell {
   background: transparent;
+}
+
+/* Remove shadow around notebook widget for Notebook application */
+body[data-jp-deck-mode='presenting'] .jp-Deck .jp-Notebook .jp-WindowedPanel-viewport {
+  box-shadow: unset;
 }
 
 body[data-notebook='notebooks']
