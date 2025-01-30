@@ -24,5 +24,6 @@
   "types": "lib/index.d.ts",
   "dependencies": {
     "jupyterlab-slideshow": "workspace:^"
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }
