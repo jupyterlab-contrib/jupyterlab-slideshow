@@ -1,5 +1,16 @@
 ## Changelog
 
+### `0.3.2`
+
+- [#21](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/21) Get back to previous fragment when using shift+space
+- [#23](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/23) Fix CSS for Jupyterlab>4.1 and Notebook
+- [#24](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/24) Use toolbar registry for the deck button and move it to the right
+- [#22](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/22) Prevent dependabot from using yarn 4
+- [#1](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/1) Bump ws from 8.15.0 to 8.18.0
+- [#3](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/3) Bump ejs from 3.1.9 to 3.1.10
+- [#8](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/8) Bump braces from 3.0.2 to 3.0.3
+- [#14](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/14) Bump follow-redirects from 1.15.3 to 1.15.9
+
 ### `0.3.1`
 
 - [#16](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/16) Rename npm package
