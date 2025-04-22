@@ -102,7 +102,7 @@ jobs:
         if: always()
 
       - name: Upload (dist)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jupyterlab-slideshow-dist-${{ github.run_number }}
           path: ./dist
@@ -179,7 +179,7 @@ jobs:
 
   #     - name: upload (reports)
   #       if: always()
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: jupyterlab-slideshow-lint-reports-${{ github.run_number }}
   #         path: ./build/reports
@@ -258,7 +258,7 @@ jobs:
 
   #     - name: upload (reports)
   #       if: always()
-  #       uses: actions/upload-artifact@v3
+  #       uses: actions/upload-artifact@v4
   #       with:
   #         name: |-
   #           jupyterlab-slideshow-reports-${{ matrix.os }}-${{matrix.python-version }}-${{ github.run_number }}
