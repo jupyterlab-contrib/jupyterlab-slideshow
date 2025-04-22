@@ -35,6 +35,7 @@ import {
   META,
   ICellDeckMetadata,
   TLayerScope,
+  STOP_KEY,
 } from '../tokens';
 import type { Layover } from '../tools/layover';
 
@@ -341,6 +342,12 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
         selector: `.${CSS.deck} .jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus`,
       });
     }
+    this._commands.addKeyBinding({
+      command: CommandIds.stop,
+      args: {},
+      keys: STOP_KEY,
+      selector: `.${CSS.deck} .jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus`,
+    });
   }
 
   public async canGo(panel: NotebookPanel): Promise<Partial<TCanGoDirection>> {
