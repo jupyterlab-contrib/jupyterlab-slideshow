@@ -1,5 +1,13 @@
 ## Changelog
 
+### `0.3.3`
+
+- [#28](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/28) Bump serialize-javascript from 6.0.1 to 6.0.2
+- [#33](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/33) Update github actions
+- [#30](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/30) Bump axios from 1.6.2 to 1.8.4
+- [#32](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/32) Bump @babel/runtime from 7.23.6 to 7.27.0
+- [#31](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/31) Allow stopping presentation with escape key
+
 ### `0.3.2`
 
 - [#21](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/21) Get back to previous fragment when using shift+space
