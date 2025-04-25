@@ -28,6 +28,7 @@ import {
   IDeckSettings,
   TSlideType,
   TLayerScope,
+  STOP_KEY,
 } from './tokens';
 import { DesignTools } from './tools/design';
 import type { Layover } from './tools/layover';
@@ -341,6 +342,12 @@ export class DeckManager implements IDeckManager {
         selector: `.${CSS.remote}`,
       });
     }
+    this._commands.addKeyBinding({
+      command: CommandIds.stop,
+      args: {},
+      keys: STOP_KEY,
+      selector: `.${CSS.remote}`,
+    });
   }
 
   public async showLayover() {

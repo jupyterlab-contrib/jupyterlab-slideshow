@@ -192,6 +192,8 @@ export const DIRECTION_KEYS: Record<TDirection, string[]> = {
   down: ['ArrowDown'],
 };
 
+export const STOP_KEY: string[] = ['Escape'];
+
 export const COMPOUND_LABEL = new Map<[TDirection, TDirection], string>([
   [[DIRECTION.down, DIRECTION.forward], 'Go to next fragment, subslide, or slide'],
   [[DIRECTION.up, DIRECTION.back], 'Go to previous fragment, subslide, or slide'],

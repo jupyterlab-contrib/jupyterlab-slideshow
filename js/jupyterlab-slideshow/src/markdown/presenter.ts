@@ -18,6 +18,7 @@ import {
   COMPOUND_KEYS,
   MARKDOWN_MIMETYPES,
   MARKDOWN_PREVIEW_FACTORY,
+  STOP_KEY,
 } from '../tokens';
 
 export class SimpleMarkdownPresenter
@@ -149,6 +150,12 @@ export class SimpleMarkdownPresenter
         selector: `.${CSS.deck} .${CSS.markdownViewer}`,
       });
     }
+    this._commands.addKeyBinding({
+      command: CommandIds.stop,
+      args: {},
+      keys: STOP_KEY,
+      selector: `.${CSS.deck} .${CSS.markdownViewer}`,
+    });
   }
 
   protected _addWindowListeners() {
