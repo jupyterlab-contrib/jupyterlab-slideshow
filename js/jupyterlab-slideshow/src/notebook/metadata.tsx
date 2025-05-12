@@ -170,7 +170,7 @@ export namespace DeckCellEditor {
     update() {
       this._activeMeta =
         (this._activeCell?.model
-          ? (getCellMetadata(this._activeCell?.model, META.deck) as ICellDeckMetadata)
+          ? (getCellMetadata(this._activeCell?.model, META.metadataKey) as ICellDeckMetadata)
           : null) || JSONExt.emptyObject;
       this.stateChanged.emit(void 0);
     }
@@ -258,9 +258,9 @@ export namespace DeckCellEditor {
 
     protected _setDeckMetadata(newMeta: ICellDeckMetadata, cell: Cell<ICellModel>) {
       if (Object.keys(newMeta).length) {
-        setCellMetadata(cell.model, META.deck, newMeta);
+        setCellMetadata(cell.model, META.metadataKey, newMeta);
       } else {
-        deleteCellMetadata(cell.model, META.deck);
+        deleteCellMetadata(cell.model, META.metadataKey);
       }
     }
 
