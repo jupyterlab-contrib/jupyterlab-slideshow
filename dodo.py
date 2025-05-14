@@ -24,8 +24,8 @@ if DOT_ENV.exists():
 
 class C:
     NPM_NAME = "jupyterlab-slideshow"
-    OLD_VERSION = "0.3.2"
-    VERSION = "0.3.3"
+    OLD_VERSION = "0.3.3"
+    VERSION = "0.3.4"
     JS_VERSION = (
         VERSION.replace("a", "-alpha.").replace("b", "-beta.").replace("rc", "-rc.")
     )

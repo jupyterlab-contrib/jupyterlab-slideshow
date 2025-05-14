@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-slideshow",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Lightweight presentations for JupyterLab",
   "license": "BSD-3-Clause",
   "author": {

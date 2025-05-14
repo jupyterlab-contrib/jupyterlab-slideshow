@@ -1,5 +1,9 @@
 ## Changelog
 
+### `0.3.4`
+
+- [#36](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/36) Fix the metadata key
+
 ### `0.3.3`
 
 - [#28](https://github.com/jupyterlab-contrib/jupyterlab-slideshow/pull/28) Bump serialize-javascript from 6.0.1 to 6.0.2
