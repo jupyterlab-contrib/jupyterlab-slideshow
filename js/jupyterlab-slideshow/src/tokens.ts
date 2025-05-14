@@ -230,7 +230,7 @@ export namespace META {
   export const nullSelector = '';
   export const presentingCell = `body[data-jp-deck-mode='presenting'] &`;
   // deck
-  export const deck = NS.split('/')[1];
+  export const metadataKey = NS;
   export const layer = 'layer';
 }
 

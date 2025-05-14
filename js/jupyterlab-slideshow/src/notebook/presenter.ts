@@ -202,7 +202,7 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
   public getLayerScope(panel: NotebookPanel): string | null {
     let { activeCell } = panel.content;
     if (activeCell) {
-      const meta = (getCellMetadata(activeCell.model, META.deck) || emptyObject) as any;
+      const meta = (getCellMetadata(activeCell.model, META.metadataKey) || emptyObject) as any;
       return (meta[META.layer] || null) as TLayerScope;
     }
     return null;
@@ -214,15 +214,15 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
       return;
     }
     let oldMeta =
-      ((getCellMetadata(activeCell.model, META.deck) || emptyObject) as Record<
+      ((getCellMetadata(activeCell.model, META.metadataKey) || emptyObject) as Record<
         string,
         any
       >) || null;
     if (layerScope == null) {
       if (oldMeta == null) {
-        deleteCellMetadata(activeCell.model, META.deck);
+        deleteCellMetadata(activeCell.model, META.metadataKey);
       } else {
-        setCellMetadata(activeCell.model, META.deck, {
+        setCellMetadata(activeCell.model, META.metadataKey, {
           ...oldMeta,
           [META.layer]: layerScope,
         });
@@ -231,7 +231,7 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
       if (oldMeta == null) {
         oldMeta = {};
       }
-      setCellMetadata(activeCell.model, META.deck, {
+      setCellMetadata(activeCell.model, META.metadataKey, {
         ...oldMeta,
         [META.layer]: layerScope,
       });
@@ -636,7 +636,7 @@ export class NotebookPresenter implements IPresenter<NotebookPanel> {
 
   /** Get layer metadata from `jupyterlab-slideshow` namespace */
   protected _getCellDeckMetadata(cell: ICellModel): ICellDeckMetadata {
-    return (getCellMetadata(cell, META.deck) ||
+    return (getCellMetadata(cell, META.metadataKey) ||
       emptyObject) as any as ICellDeckMetadata;
   }
 
